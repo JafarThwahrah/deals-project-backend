@@ -1,0 +1,55 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    ID                      Int      @id @default(autoincrement())
+    Name                    String   @unique
+    Email                   String   @unique
+    Phone                   String
+    Status                  Status
+    Gender                  String
+    Password                String 
+    Date_of_birth           DateTime 
+    Server_DateTime         DateTime @default(now())
+    DateTime_UTC            DateTime @default(now())
+    Update_DateTime_UTC     DateTime @updatedAt
+    Last_Login_DateTime_UTC DateTime 
+    Role                    String   @default("user")
+}
+
+model deals {
+    ID                  Int      @id @default(autoincrement())
+    Server_DateTime     DateTime @default(now())
+    DateTime_UTC        DateTime @default(now())
+    Update_DateTime_UTC DateTime @updatedAt
+    Name                String
+    Description         String
+    Status              Status
+    Amount              Decimal
+    Currency            String
+}
+
+model Claimed_Deals {
+    ID              Int      @id @default(autoincrement())
+    User_ID         String
+    Deal_ID         String
+    Server_DateTime DateTime @default(now())
+    DateTime_UTC    DateTime @default(now())
+    Amount          Decimal
+    Currency        String
+}
+
+
+
+enum Status {
+    Active
+    Inactive
+    Deleted
+    Expired
+}

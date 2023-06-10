@@ -1,0 +1,22 @@
+20230610	15:06:34	e001ab60-3387-4916-8a2a-bae5cd80d361	ForbiddenError	invalid csrf token
+20230610	15:07:33	1db39416-39e8-4a92-8639-7cff60b13b7b	ForbiddenError	invalid csrf token
+20230610	15:07:48	31b8223a-5c23-48b6-8723-8cc2fe8718d1	ForbiddenError	invalid csrf token
+20230610	15:09:32	d38c52b5-0805-489c-afa3-6662821f3e9c	ForbiddenError	invalid csrf token
+20230610	19:54:13	cce1d196-9232-4869-88db-96b8531dbfec	ForbiddenError	invalid csrf token
+20230610	19:55:37	42344012-cba1-467b-93ef-e8acc9d4f68c	ForbiddenError	invalid csrf token
+20230610	19:58:37	6e64da85-2401-401b-8b84-0b08215532ba	ForbiddenError	invalid csrf token
+20230610	19:59:46	6a1e62f2-88b4-4603-a8d8-1823e80ecdf1	ForbiddenError	invalid csrf token
+20230610	20:00:16	7d42e67a-9a5b-4ef1-bc97-15a4b87d5bdc	ForbiddenError	invalid csrf token
+20230610	20:00:53	e5c2a479-e34f-4287-adc2-48f89118e9f5	TypeError	req.csrfToken is not a function
+20230610	20:01:26	da36fe41-99fc-4143-814f-0a8673a3e999	TypeError	req.csrfToken is not a function
+20230610	20:18:01	38109490-30d6-45a6-93e0-d9ab124b625d	Error	data and hash arguments required
+20230610	20:21:07	d1da5f63-3b01-4358-89d4-c34dbb418a1e	Error	data and hash arguments required
+20230610	20:22:32	1b5abad6-eca4-442c-84c6-d1879c37b8bb	Error	data and hash arguments required
+20230610	20:23:05	937d6492-2a67-47c1-a6b0-3eb7e6e22107	Error	data and hash arguments required
+20230610	20:24:30	1ff0bfb9-088e-409d-aecf-207f69120284	Error	data and hash arguments required
+20230610	20:25:38	80730537-d340-4267-b818-1e7c1c759c32	Error	data and hash arguments required
+20230610	20:25:57	8f128f40-9265-494b-a29d-934089d475e3	Error	data and hash arguments required
+20230610	20:27:54	aa256d4c-569b-49bf-b3d7-a171ed99fa70	Error	data and hash arguments required
+20230610	20:51:59	960c6f4e-1f7e-44b2-8c42-8b02cca2015f	Error	Cannot set headers after they are sent to the client
+20230610	22:17:53	9158b745-3961-44f7-ae33-2d03e1d28399	Error	Access denied for user ''@'localhost' (using password: NO)
+20230610	22:18:39	00aa9185-e5c7-47ee-b3bb-4310cc41a578	Error	Access denied for user ''@'localhost' (using password: NO)
