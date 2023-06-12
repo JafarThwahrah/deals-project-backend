@@ -1,5 +1,6 @@
 const session = require("express-session");
 const MySQLStore = require("express-mysql-session")(session);
+require("dotenv").config();
 
 const sessionStore = new MySQLStore({
   host: process.env.DATABASE_HOST,

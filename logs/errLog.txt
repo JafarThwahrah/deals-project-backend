@@ -20,3 +20,39 @@
 20230610	20:51:59	960c6f4e-1f7e-44b2-8c42-8b02cca2015f	Error	Cannot set headers after they are sent to the client
 20230610	22:17:53	9158b745-3961-44f7-ae33-2d03e1d28399	Error	Access denied for user ''@'localhost' (using password: NO)
 20230610	22:18:39	00aa9185-e5c7-47ee-b3bb-4310cc41a578	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:04:40	71dd7b9c-7cb3-4a70-a667-41e035d7f0f3	TypeError	req.isAuthenticated is not a function
+20230612	00:05:48	1382ddba-1c09-4d4c-8186-841bc97d7ef8	TypeError	req.isAuthenticated is not a function
+20230612	00:07:49	a81de89c-c268-4276-8a31-a9b052d6c0d2	TypeError	req.isAuthenticated is not a function
+20230612	00:09:23	5c420d8d-259d-4b07-82ea-0875133b15cf	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:11:54	b9fbdf88-c1be-4e8a-a01a-fe3a8fb66a83	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:12:42	5ad0a584-636c-4769-bed5-ac2b139ba5d0	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:14:40	687ca0f0-48d3-4c3f-8433-c79eb2f85f16	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:15:36	3f38ae17-0de3-4297-93a1-4eda22040793	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:20:46	bdceeea6-006d-49fc-9cff-9c42b7f46ba1	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:22:55	e9a51f0e-3af5-4206-b481-46f740c5b955	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:26:55	bfca8117-f983-412c-a761-de54721ac7d1	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	00:27:35	aca059b7-d012-461d-8ee2-9b8416b5ba3a	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	21:44:09	fc965361-200e-4c45-b5e2-7ffdfc9fe4c0	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	21:45:48	21327af6-32d1-48ca-8f0c-225c5c5c31f8	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	21:48:36	ad62d758-dabf-4ca4-8f2a-f48071a3a727	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	21:55:55	5639cc68-d506-4a12-bc5d-88cf40e7ba4b	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	21:56:38	d586eb55-1f66-4af6-b187-282b0cc6a603	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:00:38	5b4a6a14-9d77-42b2-a7f3-b32c645dfc87	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:02:23	aa268791-b2f4-448a-9394-5e393507627d	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:02:57	d8de1f3b-8421-4b72-b277-c33cb3ca15ad	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:05:51	3753cbba-16fd-4c64-a5ea-cb9ddf726f4a	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	22:06:41	560d9a09-95a7-42dd-ad85-e6dd22a8fc54	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:07:20	2a8779d9-7fa6-4e28-9e02-f76ae855138c	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:10:09	7bb173f7-d5f8-408c-a108-58b3d3a67f12	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:12:48	88ada63b-f823-4bb5-aa5a-ecd5553b0a5f	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+20230612	22:14:05	a3d29fd8-d356-4931-adc9-578b9692de75	Error	Access denied for user ''@'localhost' (using password: NO)
+20230612	22:26:00	a94750d0-005e-4c62-a0a9-bdcf4d31113a	TypeError	req.isAuthenticated is not a function
+20230612	22:30:33	d64e8910-647d-4245-946c-c425312fbb31	TypeError	getAllUsersQuery is not a function
+20230612	22:31:56	b57dc1fd-1b19-4b5f-ae0a-a2a8ec28f84a	TypeError	response is not a function
+20230612	22:32:37	b009b118-f69f-49d5-bb77-8eebb2bbf3f0	TypeError	res is not a function
+20230612	22:34:34	9733747d-ad48-4df7-9a67-8540257420db	TypeError	res is not a function
+20230612	22:35:30	b85413a2-9530-4234-8802-7e8074b2170d	TypeError	res is not a function
+20230612	22:36:00	6160b3ac-23be-4057-86ce-c404fb2fe7ed	TypeError	res is not a function
+20230612	22:36:46	490f1b4e-9279-4bce-9caf-491049bd0160	TypeError	res is not a function
+20230612	22:39:08	9f0b7ea8-87ae-4615-bb2b-a4e462c45bcc	TypeError	res is not a function
+20230612	23:00:51	0411d574-3817-4d32-8382-8a1ebfc82105	ReferenceError	getAllUsersQusery is not defined

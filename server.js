@@ -7,8 +7,9 @@ const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const errorlogger = require("./middleware/errorLogger");
 const session = require("express-session");
-const verifyPassport = require("./middleware/verifyPassport");
+const { verifyPassport } = require("./middleware/verifyPassport");
 const sessionStore = require("./config/passportConfig");
+const passport = require("passport");
 require("dotenv").config();
 
 const PORT = 5000;
@@ -27,7 +28,7 @@ app.use(
     saveUninitialized: false,
     store: sessionStore,
     cookie: {
-      maxAge: 15 * 60 * 1000,
+      maxAge: 100 * 60 * 1000,
     },
   })
 );
@@ -35,9 +36,12 @@ app.use(
 app.use("/register", require("./routes/register"));
 app.use("/auth", require("./routes/auth"));
 
-// app.use("/route1",verifyPassport, require("./routes/route1"));
-// app.use("/route2", verifyPassport,require("./routes/route2"));
-// app.use("/route3", verifyPassport,require("./routes/route3"));
+// Protected routes
+app.use(passport.initialize());
+app.use(passport.session());
+app.use("/users", verifyPassport, require("./routes/api/users"));
+app.use("/deals", verifyPassport, require("./routes/api/deals"));
+// app.use("/route3", verifyPassport, require("./routes/route3"));
 
 app.use(errorlogger);
 

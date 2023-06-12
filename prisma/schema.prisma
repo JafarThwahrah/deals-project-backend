@@ -7,7 +7,7 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model User {
+model users {
     ID                      Int      @id @default(autoincrement())
     Name                    String   @unique
     Email                   String   @unique
@@ -21,6 +21,9 @@ model User {
     Update_DateTime_UTC     DateTime @updatedAt
     Last_Login_DateTime_UTC DateTime 
     Role                    String   @default("user")
+    Image                   Bytes?
+    deletedAt DateTime?
+
 }
 
 model deals {
@@ -33,9 +36,11 @@ model deals {
     Status              Status
     Amount              Decimal
     Currency            String
+    deletedAt           DateTime?
+
 }
 
-model Claimed_Deals {
+model claimed_deals {
     ID              Int      @id @default(autoincrement())
     User_ID         String
     Deal_ID         String

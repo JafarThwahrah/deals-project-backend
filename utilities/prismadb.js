@@ -2,6 +2,19 @@ const { PrismaClient, Prisma } = require("@prisma/client");
 const bcrypt = require("bcrypt");
 const prisma = new PrismaClient();
 
+async function testDatabaseConnection() {
+  try {
+    await prisma.$connect();
+    console.log("Connection established successfully!");
+    // Perform a test query or operation here
+  } catch (error) {
+    console.error("Connection failed:", error);
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+testDatabaseConnection();
+
 const findUserByName = async (name, next) => {
   try {
     const user = await prisma.user.findUnique({
@@ -69,4 +82,28 @@ const storeUser = async (
   }
 };
 
-module.exports = { checkUserDublicate, storeUser, findUserByName };
+const getAllUsersQuery = async (next) => {
+  try {
+    const users = await prisma.user.findMany();
+    return users;
+  } catch (err) {
+    next(err);
+  }
+};
+
+const getAllDealsQuery = async (next) => {
+  try {
+    const deals = await prisma.deals.findMany();
+    return deals;
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = {
+  checkUserDublicate,
+  storeUser,
+  findUserByName,
+  getAllUsersQuery,
+  getAllDealsQuery,
+};
