@@ -4,16 +4,16 @@ const LocalStrategy = require("passport-local");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const { findUserByName } = require("../utilities/prismadb");
-
 passport.use(
   "local",
   new LocalStrategy(
     {
       usernameField: "name",
       passwordField: "password",
+      passReqToCallback: true,
     },
-    async function verify(name, password, cb) {
-      const user = await findUserByName(name, this.next);
+    async function (req, name, password, cb) {
+      const user = await findUserByName(name, req.next);
 
       if (!user)
         return cb(null, false, { message: "Incorrect username or password." });
@@ -32,16 +32,17 @@ passport.use(
   )
 );
 
-passport.serializeUser(function (user, cb) {
-  process.nextTick(function () {
-    cb(null, { id: user.id, username: user.username });
-  });
+passport.serializeUser((user, done) => {
+  done(null, user.Name);
 });
 
-passport.deserializeUser(function (user, cb) {
-  process.nextTick(function () {
-    return cb(null, user);
-  });
+passport.deserializeUser(async (Name, done) => {
+  try {
+    const user = await findUserByName(Name);
+    done(null, user);
+  } catch (error) {
+    done(error, null);
+  }
 });
 
 router.post("/login/password", function (req, res, next) {

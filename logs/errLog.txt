@@ -56,3 +56,16 @@
 20230612	22:36:46	490f1b4e-9279-4bce-9caf-491049bd0160	TypeError	res is not a function
 20230612	22:39:08	9f0b7ea8-87ae-4615-bb2b-a4e462c45bcc	TypeError	res is not a function
 20230612	23:00:51	0411d574-3817-4d32-8382-8a1ebfc82105	ReferenceError	getAllUsersQusery is not defined
+20230615	00:39:06	dcae2762-8911-4b9a-b2c7-684a1928f1e1	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	00:39:18	4f23a23f-9c81-42c6-ad07-66f55e09ba16	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	00:39:25	145215e7-ac03-44ea-aae0-87c269e8d0bc	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	00:39:32	a37b25f4-a9d3-4321-ad66-7e0799c234ac	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	00:40:30	f6ad5095-ca69-472d-897e-3e2d3d84e385	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	00:42:43	eb64c3dd-a579-41b1-9693-ee09dbc4b3f3	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	00:44:57	24dd6893-3b62-41ec-841a-ffffa5de8834	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	21:28:02	036b2d41-2d47-4b88-931f-0787c0cfffc6	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	21:28:36	60e56f10-b78c-46f3-a54b-e7b223a75f79	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230615	21:28:39	ef9af247-554e-4448-bb65-5616dee7765f	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230616	01:07:22	f34d5d75-3a6c-4e2d-bbe1-3f2a2269297d	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230616	01:11:16	c9810351-aea5-49f9-aa1c-f821625c9e19	TypeError	Cannot read properties of undefined (reading 'findUnique')
+20230616	02:50:09	68cb8465-b152-48e7-b584-77e5bb01bda2	ReferenceError	User is not defined

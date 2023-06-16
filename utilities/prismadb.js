@@ -2,51 +2,69 @@ const { PrismaClient, Prisma } = require("@prisma/client");
 const bcrypt = require("bcrypt");
 const prisma = new PrismaClient();
 
-async function testDatabaseConnection() {
+const storeDealQuery = async (
+  Name,
+  Description,
+  Status,
+  Amount,
+  Currency,
+  res,
+  next
+) => {
   try {
-    await prisma.$connect();
-    console.log("Connection established successfully!");
-    // Perform a test query or operation here
+    const deal = await prisma.deals.create({
+      Name,
+      Description,
+      Status,
+      Amount,
+      Currency,
+    });
+
+    if (user) {
+      return res.json({
+        status: 201,
+        deal: deal,
+      });
+    }
   } catch (error) {
-    console.error("Connection failed:", error);
-  } finally {
-    await prisma.$disconnect();
+    next(error);
   }
-}
-testDatabaseConnection();
+};
 
 const findUserByName = async (name, next) => {
   try {
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: {
         Name: name,
       },
     });
-    return user;
+    if (user) {
+      return user;
+    }
   } catch (err) {
     next(err);
   }
 };
 const checkUserDublicate = async (email, name, next) => {
   try {
-    let user = await prisma.user.findUnique({
+    let users = await prisma.users.findUnique({
       where: {
         Email: email,
       },
     });
 
-    if (user) {
-      user.duplicateEmail = true;
-      return user;
+    if (users) {
+      users.duplicateEmail = true;
+      return users;
     }
-    user = await prisma.user.findUnique({
+    users = await prisma.users.findUnique({
       where: {
         Name: name,
       },
     });
-    if (user) {
-      user.duplicateName = true;
-      return user;
+    if (users) {
+      users.duplicateName = true;
+      return users;
     }
   } catch (err) {
     next(err);
@@ -63,7 +81,7 @@ const storeUser = async (
   next
 ) => {
   try {
-    const user = await prisma.user.create({
+    const users = await prisma.users.create({
       data: {
         Name: name,
         Email: email,
@@ -76,7 +94,7 @@ const storeUser = async (
       },
     });
 
-    return user;
+    return users;
   } catch (err) {
     next(err);
   }
@@ -84,7 +102,7 @@ const storeUser = async (
 
 const getAllUsersQuery = async (next) => {
   try {
-    const users = await prisma.user.findMany();
+    const users = await prisma.users.findMany();
     return users;
   } catch (err) {
     next(err);
@@ -100,10 +118,30 @@ const getAllDealsQuery = async (next) => {
   }
 };
 
+const deleteUsersQuery = async (req, next) => {
+  try {
+    const usersArray = req.body;
+    if (usersArray.length != 0) {
+      usersArray.map(async (user) => {
+        await prisma.users.deleteMany({
+          where: {
+            ID: user.ID,
+          },
+        });
+      });
+    }
+    next();
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   checkUserDublicate,
   storeUser,
   findUserByName,
   getAllUsersQuery,
   getAllDealsQuery,
+  storeDealQuery,
+  deleteUsersQuery,
 };
