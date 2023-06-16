@@ -8,23 +8,21 @@ const storeDealQuery = async (
   Status,
   Amount,
   Currency,
-  res,
   next
 ) => {
   try {
     const deal = await prisma.deals.create({
-      Name,
-      Description,
-      Status,
-      Amount,
-      Currency,
+      data: {
+        Name,
+        Description,
+        Status,
+        Amount,
+        Currency,
+      },
     });
 
-    if (user) {
-      return res.json({
-        status: 201,
-        deal: deal,
-      });
+    if (deal) {
+      return deal;
     }
   } catch (error) {
     next(error);
@@ -144,4 +142,5 @@ module.exports = {
   getAllDealsQuery,
   storeDealQuery,
   deleteUsersQuery,
+  prisma,
 };

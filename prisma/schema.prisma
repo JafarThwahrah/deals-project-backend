@@ -19,10 +19,10 @@ model users {
     Server_DateTime         DateTime @default(now())
     DateTime_UTC            DateTime @default(now())
     Update_DateTime_UTC     DateTime @updatedAt
-    Last_Login_DateTime_UTC DateTime 
+    Last_Login_DateTime_UTC DateTime?
     Role                    String   @default("user")
     Image                   Bytes?
-    deletedAt DateTime?
+    deletedAt               DateTime?
 
 }
 

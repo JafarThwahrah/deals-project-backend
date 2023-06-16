@@ -69,3 +69,217 @@
 20230616	01:07:22	f34d5d75-3a6c-4e2d-bbe1-3f2a2269297d	TypeError	Cannot read properties of undefined (reading 'findUnique')
 20230616	01:11:16	c9810351-aea5-49f9-aa1c-f821625c9e19	TypeError	Cannot read properties of undefined (reading 'findUnique')
 20230616	02:50:09	68cb8465-b152-48e7-b584-77e5bb01bda2	ReferenceError	User is not defined
+20230616	12:11:28	a6d248f3-9555-474b-b168-d29a03ea2175	Error	
+Invalid `prisma.deals.create()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:15:37
+
+  12   next
+  13 ) => {
+  14   try {
+→ 15     const deal = await prisma.deals.create({
+           Name: undefined,
+           Description: undefined,
+           Status: undefined,
+           Amount: undefined,
+           Currency: undefined,
+         + data: dealsCreateInput | dealsUncheckedCreateInput
+         })
+
+Argument data is missing.
+
+Note: Lines with + are required
+
+20230616	12:14:48	90fb81b0-2037-463d-9e65-9cd34639659c	Error	
+Invalid `prisma.deals.create()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:15:37
+
+  12   next
+  13 ) => {
+  14   try {
+→ 15     const deal = await prisma.deals.create({
+           Name: 'deal1Title',
+           ~~~~
+           Description: 'deals 1 description...',
+           ~~~~~~~~~~~
+           Status: 'Active',
+           ~~~~~~
+           Amount: '50',
+           ~~~~~~
+           Currency: 'USD',
+           ~~~~~~~~
+         + data: dealsCreateInput | dealsUncheckedCreateInput
+         })
+
+Unknown arg `Name` in Name for type deals. Did you mean `data`?
+Unknown arg `Description` in Description for type deals. Did you mean `select`?
+Unknown arg `Status` in Status for type deals. Did you mean `data`?
+Unknown arg `Amount` in Amount for type deals. Did you mean `select`?
+Unknown arg `Currency` in Currency for type deals. Did you mean `select`?
+Argument data is missing.
+
+Note: Lines with + are required
+
+20230616	13:25:37	ef5583a1-9f53-4e73-8af3-8ef4302c7ba1	Error	
+Invalid `prisma.deals.create()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:15:37
+
+  12   next
+  13 ) => {
+  14   try {
+→ 15     const deal = await prisma.deals.create({
+           Name: 'deal1Title',
+           ~~~~
+           Description: 'deals 1 description...',
+           ~~~~~~~~~~~
+           Status: 'Active',
+           ~~~~~~
+           Amount: '50',
+           ~~~~~~
+           Currency: 'USD',
+           ~~~~~~~~
+         + data: dealsCreateInput | dealsUncheckedCreateInput
+         })
+
+Unknown arg `Name` in Name for type deals. Did you mean `data`?
+Unknown arg `Description` in Description for type deals. Did you mean `select`?
+Unknown arg `Status` in Status for type deals. Did you mean `data`?
+Unknown arg `Amount` in Amount for type deals. Did you mean `select`?
+Unknown arg `Currency` in Currency for type deals. Did you mean `select`?
+Argument data is missing.
+
+Note: Lines with + are required
+
+20230616	13:27:01	5e7be3bc-1833-4af1-984f-e43a93e28df0	TypeError	Cannot read properties of undefined (reading 'create')
+20230616	13:27:16	7d54be02-5837-45fd-b43e-854a5aaa3402	Error	
+Invalid `prisma.deals.create()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:15:37
+
+  12   next
+  13 ) => {
+  14   try {
+→ 15     const deal = await prisma.deals.create({
+           Name: 'deal1Title',
+           ~~~~
+           Description: 'deals 1 description...',
+           ~~~~~~~~~~~
+           Status: 'Active',
+           ~~~~~~
+           Amount: '50',
+           ~~~~~~
+           Currency: 'USD',
+           ~~~~~~~~
+         + data: dealsCreateInput | dealsUncheckedCreateInput
+         })
+
+Unknown arg `Name` in Name for type deals. Did you mean `data`?
+Unknown arg `Description` in Description for type deals. Did you mean `select`?
+Unknown arg `Status` in Status for type deals. Did you mean `data`?
+Unknown arg `Amount` in Amount for type deals. Did you mean `select`?
+Unknown arg `Currency` in Currency for type deals. Did you mean `select`?
+Argument data is missing.
+
+Note: Lines with + are required
+
+20230616	13:32:28	2e70b353-c45c-4963-b44f-86e7a0cfa6d8	ReferenceError	Name is not defined
+20230616	13:33:36	3f8cecc2-b434-4e5d-ab46-8bfffbfb7429	Error	
+Invalid `prisma.deals.create()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:7:37
+
+  4 
+  5 const storeDealQuery = async (data, res, next) => {
+  6   try {
+→ 7     const deal = await prisma.deals.create({
+          Name: 'deal1Title',
+          ~~~~
+          Description: 'deals 1 description...',
+          ~~~~~~~~~~~
+          Status: 'Active',
+          ~~~~~~
+          Amount: '50',
+          ~~~~~~
+          Currency: 'USD',
+          ~~~~~~~~
+        + data: dealsCreateInput | dealsUncheckedCreateInput
+        })
+
+Unknown arg `Name` in Name for type deals. Did you mean `data`?
+Unknown arg `Description` in Description for type deals. Did you mean `select`?
+Unknown arg `Status` in Status for type deals. Did you mean `data`?
+Unknown arg `Amount` in Amount for type deals. Did you mean `select`?
+Unknown arg `Currency` in Currency for type deals. Did you mean `select`?
+Argument data is missing.
+
+Note: Lines with + are required
+
+20230616	13:34:00	497b675a-7acf-495d-9082-9cf2cb424e5e	Error	
+Invalid `prisma.deals.create()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:7:37
+
+  4 
+  5 const storeDealQuery = async (data, res, next) => {
+  6   try {
+→ 7     const deal = await prisma.deals.create({
+          Name: 'deal1Title',
+          ~~~~
+          Description: 'deals 1 description...',
+          ~~~~~~~~~~~
+          Status: 'Active',
+          ~~~~~~
+          Amount: '50',
+          ~~~~~~
+          Currency: 'USD',
+          ~~~~~~~~
+        + data: dealsCreateInput | dealsUncheckedCreateInput
+        })
+
+Unknown arg `Name` in Name for type deals. Did you mean `data`?
+Unknown arg `Description` in Description for type deals. Did you mean `select`?
+Unknown arg `Status` in Status for type deals. Did you mean `data`?
+Unknown arg `Amount` in Amount for type deals. Did you mean `select`?
+Unknown arg `Currency` in Currency for type deals. Did you mean `select`?
+Argument data is missing.
+
+Note: Lines with + are required
+
+20230616	13:34:23	f251b95e-b5de-410f-bdc1-06d6b1131580	Error	
+Invalid `prisma.deals.create()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:8:37
+
+  5 const storeDealQuery = async (data, res, next) => {
+  6   try {
+  7     console.log(data);
+→ 8     const deal = await prisma.deals.create({
+          Name: 'deal1Title',
+          ~~~~
+          Description: 'deals 1 description...',
+          ~~~~~~~~~~~
+          Status: 'Active',
+          ~~~~~~
+          Amount: '50',
+          ~~~~~~
+          Currency: 'USD',
+          ~~~~~~~~
+        + data: dealsCreateInput | dealsUncheckedCreateInput
+        })
+
+Unknown arg `Name` in Name for type deals. Did you mean `data`?
+Unknown arg `Description` in Description for type deals. Did you mean `select`?
+Unknown arg `Status` in Status for type deals. Did you mean `data`?
+Unknown arg `Amount` in Amount for type deals. Did you mean `select`?
+Unknown arg `Currency` in Currency for type deals. Did you mean `select`?
+Argument data is missing.
+
+Note: Lines with + are required
+
+20230616	13:41:26	e0df6e00-5650-4239-9e15-f2cac13e9b53	TypeError	Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+20230616	13:41:55	0e43fe99-cc87-4b64-9309-eb942534a0ff	TypeError	Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+20230616	13:42:51	1f1c61a5-2ecd-4e45-a1c1-89d959780e14	TypeError	Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle

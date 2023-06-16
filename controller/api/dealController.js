@@ -24,7 +24,6 @@ const storeDeal = async (req, res, next) => {
       Status,
       Amount,
       Currency,
-      res,
       next
     );
     if (deal) {
