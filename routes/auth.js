@@ -59,7 +59,12 @@ router.post("/login/password", function (req, res, next) {
       if (err) {
         return next(err);
       }
-      return res.json({ message: "Authentication successful." });
+      const sessionId = req.sessionID;
+      // res.setHeader(
+      //   "Set-Cookie",
+      //   `sessionId=${sessionId}; HttpOnly; SameSite=Strict`
+      // );
+      return res.json({ message: "Authentication successful.", sessionId });
     });
   })(req, res, next);
 });

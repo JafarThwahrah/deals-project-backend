@@ -2,33 +2,46 @@ const { checkUserDublicate } = require("../utilities/prismadb");
 const { storeUser } = require("../utilities/prismadb");
 const { registerValidation } = require("../utilities/validation");
 const handleRegister = async (req, res, next) => {
-  const { name, email, password, phone, gender, date_of_birth } = req.body;
+  const {
+    name,
+    email,
+    password,
+    password_confirmation,
+    phone,
+    gender,
+    date_of_birth,
+  } = req.body;
 
   try {
     //server side form validation
-    registerValidation(
+    let errors = registerValidation(
       name,
       email,
       password,
+      password_confirmation,
       phone,
       gender,
       date_of_birth,
-      res
+      next
     );
+
+    if (Object.keys(errors).length != 0) {
+      return res.status(400).json({
+        errors: errors,
+      });
+    }
 
     //check dublicate accounts
     const checkDublicate = await checkUserDublicate(email, name, next);
 
     if (checkDublicate) {
-      let message;
-
       if (checkDublicate.duplicateEmail)
-        message = "The Email  is already registered";
+        errors.email = "The Email  is already registered";
       if (checkDublicate.duplicateName)
-        message = "The Name  is already registered";
+        errors.name = "The Name  is already registered";
 
       return res.status(409).json({
-        message: message,
+        errors: errors,
       });
     }
 

@@ -8,6 +8,6 @@ router
   .get(verifyPassport, verifyAdmin, userController.getAllUsers)
   .delete(verifyPassport, verifyAdmin, userController.destroy);
 
-// router.route("/:id").get(userController.getSingleUser);
+router.route("/profile").get(verifyPassport, userController.getSingleUser);
 
 module.exports = router;

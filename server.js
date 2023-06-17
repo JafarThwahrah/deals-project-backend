@@ -18,6 +18,7 @@ const upload = multer();
 app.use(upload.none());
 app.use(logger);
 app.use(cors(corsOptions));
+app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
@@ -28,7 +29,10 @@ app.use(
     saveUninitialized: false,
     store: sessionStore,
     cookie: {
-      maxAge: 100 * 60 * 1000,
+      secure: true,
+      httpOnly: true,
+      sameSite: "strict",
+      maxAge: 86400000,
     },
   })
 );

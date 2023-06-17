@@ -15,6 +15,15 @@ const getAllUsers = async (req, res, next) => {
   }
 };
 
+const getSingleUser = async (req, res, next) => {
+  try {
+    const user = req.user;
+    console.log(user);
+  } catch (error) {
+    next(error);
+  }
+};
+
 const destroy = async (req, res, next) => {
   try {
     await deleteUsersQuery(req, next);
@@ -26,4 +35,4 @@ const destroy = async (req, res, next) => {
   }
 };
 
-module.exports = { getAllUsers, destroy };
+module.exports = { getAllUsers, destroy, getSingleUser };

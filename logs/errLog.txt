@@ -283,3 +283,138 @@ Note: Lines with + are required
     --> starting at object with constructor 'Socket'
     |     property 'parser' -> object with constructor 'HTTPParser'
     --- property 'socket' closes the circle
+20230616	18:31:25	8beca66e-6276-4805-811c-f8e51bfc77c7	Error	
+Invalid `prisma.users.findUnique()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:48:36
+
+  45 };
+  46 const checkUserDublicate = async (email, name, next) => {
+  47   try {
+→ 48     let users = await prisma.users.findUnique({
+           where: {
+         ?   Email?: String,
+         ?   ID?: Int,
+         ?   Name?: String
+           }
+         })
+
+Argument where of type usersWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+20230617	01:08:08	7affba25-34c0-41e7-b6d3-486478b00eb0	Error	
+Invalid `prisma.users.findUnique()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:48:36
+
+  45 };
+  46 const checkUserDublicate = async (email, name, next) => {
+  47   try {
+→ 48     let users = await prisma.users.findUnique({
+           where: {
+         ?   Email?: String,
+         ?   ID?: Int,
+         ?   Name?: String
+           }
+         })
+
+Argument where of type usersWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+20230617	01:14:36	c0807b70-a2bf-4e50-93ed-e36178f5ade6	Error	
+Invalid `prisma.users.findUnique()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:48:36
+
+  45 };
+  46 const checkUserDublicate = async (email, name, next) => {
+  47   try {
+→ 48     let users = await prisma.users.findUnique({
+           where: {
+         ?   Email?: String,
+         ?   ID?: Int,
+         ?   Name?: String
+           }
+         })
+
+Argument where of type usersWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+20230617	01:14:42	d16c18ea-d538-4b47-9fcd-861335203ae3	Error	
+Invalid `prisma.users.findUnique()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:48:36
+
+  45 };
+  46 const checkUserDublicate = async (email, name, next) => {
+  47   try {
+→ 48     let users = await prisma.users.findUnique({
+           where: {
+         ?   Email?: String,
+         ?   ID?: Int,
+         ?   Name?: String
+           }
+         })
+
+Argument where of type usersWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+20230617	01:25:03	d0defdc1-cdfb-4cd2-9230-9078db5e19c2	Error	
+Invalid `prisma.users.findUnique()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:48:36
+
+  45 };
+  46 const checkUserDublicate = async (email, name, next) => {
+  47   try {
+→ 48     let users = await prisma.users.findUnique({
+           where: {
+         ?   Email?: String,
+         ?   ID?: Int,
+         ?   Name?: String
+           }
+         })
+
+Argument where of type usersWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+20230617	01:28:00	175c3046-20fa-4b3c-a752-102d5e5696af	Error	
+Invalid `prisma.users.findUnique()` invocation in
+C:\Users\Dell\Desktop\code\deals-project-backend\utilities\prismadb.js:48:36
+
+  45 };
+  46 const checkUserDublicate = async (email, name, next) => {
+  47   try {
+→ 48     let users = await prisma.users.findUnique({
+           where: {
+         ?   Email?: String,
+         ?   ID?: Int,
+         ?   Name?: String
+           }
+         })
+
+Argument where of type usersWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+20230617	01:30:15	0cc84bf5-1652-41ce-81f0-703f74af7e13	Error	Cannot set headers after they are sent to the client
+20230617	01:31:54	5af9aa31-587e-4a41-bd12-6502f455c4b3	Error	Cannot set headers after they are sent to the client
+20230617	01:34:05	78cc83eb-625b-4068-ba2f-6806b0ff5d65	Error	Cannot set headers after they are sent to the client
+20230617	01:34:21	2d6bb721-f988-4213-bad5-7b7f80d28d64	Error	Cannot set headers after they are sent to the client
+20230617	01:35:36	778d3a89-e1b8-486c-8bb6-408d40984fa2	Error	Cannot set headers after they are sent to the client
+20230617	01:37:38	47b0c335-b974-4cc8-9802-9d2e51ec8aed	Error	Cannot set headers after they are sent to the client
+20230617	01:43:26	50f8b8e4-43f9-41e7-b709-6d992c87aca4	Error	Cannot set headers after they are sent to the client
+20230617	01:48:28	b29792a9-eed1-488d-8ee1-fea4e8ccee70	Error	Cannot set headers after they are sent to the client
+20230617	01:48:54	b5634a1c-a3ed-488d-814f-5e2ff3b3b51a	Error	Cannot set headers after they are sent to the client
+20230617	01:49:23	b7650832-4336-47ff-ab4c-9d03c1be76b5	Error	Cannot set headers after they are sent to the client
+20230617	01:51:48	43b9e8af-3437-4f3c-8842-7b38b2daaeea	undefined	undefined
+20230617	02:09:07	0f9c755a-ae25-4fa4-8ec6-c613ea360964	undefined	undefined
+20230617	02:10:04	edeea4c4-dbf9-46f9-980a-f21fae548ae4	undefined	undefined
+20230617	02:11:35	bca5b9ba-6c61-4a0f-8f77-93ef4fa158e5	undefined	undefined
+20230617	02:20:41	e1139b39-0c1c-4eb5-b6bf-0ed9d55d8395	ReferenceError	object is not defined
+20230617	04:51:30	d0c0de55-ea0c-46c2-b2c2-5576ba88d920	Error	Unknown column 'NaN' in 'field list'
+20230617	04:52:39	6a1a16a8-4a0e-410b-95f0-b678a35bd147	Error	Unknown column 'NaN' in 'field list'
+20230617	04:54:33	8cdf041d-afee-4354-8ecf-df22b7129315	TypeError	whiteList.indexOf is not a function
+20230617	04:54:33	613bb42a-d93b-4807-8e0c-09d3be8d503b	TypeError	whiteList.indexOf is not a function
+20230617	04:54:33	76cbedb0-4c10-457e-b2f3-304337a080d8	TypeError	whiteList.indexOf is not a function
+20230617	05:13:48	013c66d7-af54-4e69-acd6-dc3e47b02461	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
