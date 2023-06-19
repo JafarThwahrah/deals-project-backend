@@ -19,7 +19,7 @@ app.use(upload.none());
 app.use(logger);
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
@@ -28,12 +28,12 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: sessionStore,
-    cookie: {
-      secure: true,
-      httpOnly: true,
-      sameSite: "strict",
-      maxAge: 86400000,
-    },
+    // cookie: {
+    //   secure: true,
+    //   httpOnly: true,
+    //   sameSite: "strict",
+    //   maxAge: 86400000,
+    // },
   })
 );
 
